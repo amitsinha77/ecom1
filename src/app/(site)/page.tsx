@@ -20,10 +20,21 @@ import {
   AREAS,
   PLANS,
   FAQ_ITEMS,
+  LOCAL_SEO_TOWNS,
 } from "@/lib/data";
 import { formatCurrency } from "@/lib/utils";
 
 const FAQ_ITEMS_PREVIEW = FAQ_ITEMS.slice(0, 6);
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ITEMS_PREVIEW.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 export default function HomePage() {
   return (
@@ -53,12 +64,14 @@ export default function HomePage() {
             </div>
 
             <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-ink-800 md:text-5xl lg:text-6xl text-balance">
-              Professional House Cleaning Across the UK
+              Professional House Cleaning in Bolton, Manchester &amp; Across the UK
             </h1>
             <p className="mt-5 max-w-xl text-lg text-muted-foreground md:text-xl">
-              Insured, vetted cleaners you can trust. Eco-friendly products, the
-              same friendly face every visit, and a satisfaction guarantee on
-              every clean.
+              Looking for domestic cleaners near you? PureMaids connects you with
+              insured, DBS-checked local cleaners for house cleaning, end of
+              tenancy cleaning, deep cleaning services and office cleaning.
+              Eco-friendly products, the same trusted cleaner every visit, and a
+              satisfaction guarantee on every clean.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
@@ -279,6 +292,46 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Local SEO — towns we cover */}
+      <section className="section">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="eyebrow">Local Cleaning Services</span>
+            <h2 className="mt-4 text-3xl font-bold text-ink-800 md:text-4xl text-balance">
+              Trusted cleaners in Bolton, Manchester, Bury, Wigan &amp; Preston
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Searching for domestic cleaners near me? PureMaids provides
+              vetted, insured house cleaning across Greater Manchester and
+              Lancashire. Find your town below and book online today.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {LOCAL_SEO_TOWNS.map((t) => (
+              <div
+                key={t.name}
+                className="rounded-2xl border border-ink-100 bg-white p-6 shadow-sm transition-all hover:shadow-md"
+              >
+                <h3 className="font-display text-lg font-bold text-ink-800">
+                  House Cleaning in {t.name}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {t.description}
+                </p>
+                <Link
+                  href="/book-online"
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:underline"
+                >
+                  Book cleaning in {t.name}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <Testimonials />
 
@@ -294,10 +347,11 @@ export default function HomePage() {
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">Areas We Cover</span>
             <h2 className="mt-4 text-3xl font-bold text-ink-800 md:text-4xl text-balance">
-              Cleaning across the UK
+              Cleaning across Greater Manchester, Lancashire &amp; the UK
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              We're expanding fast. Find your city below.
+              From house cleaning in Bolton to office cleaning in Manchester,
+              we're expanding fast. Find your city below.
             </p>
           </div>
 
@@ -311,7 +365,7 @@ export default function HomePage() {
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <img
                     src={a.image}
-                    alt={a.name}
+                    alt={`Cleaning services in ${a.name}`}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/20 to-transparent" />
@@ -341,6 +395,11 @@ export default function HomePage() {
 
       {/* CTA */}
       <CTASection />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </>
   );
 }

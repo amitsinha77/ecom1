@@ -2,9 +2,16 @@ import { ServicePage } from "@/components/sections/service-page";
 import { SERVICES } from "@/lib/data";
 
 export const metadata = {
-  title: "Domestic Cleaning | Weekly & Fortnightly Cleaners",
+  title: "Domestic Cleaning Bolton & Manchester | Weekly & Fortnightly Cleaners",
   description:
-    "Reliable weekly and fortnightly domestic cleaning from PureMaids. Same trusted, vetted cleaner every visit. Eco-friendly products. Fully insured. Get an instant quote.",
+    "Reliable weekly and fortnightly domestic cleaning in Bolton, Manchester, Bury, Wigan & Preston. Same trusted, DBS-checked cleaner every visit. Eco-friendly products. Fully insured. Get an instant quote.",
+  keywords: [
+    "domestic cleaners near me",
+    "house cleaning Bolton",
+    "weekly cleaning",
+    "fortnightly cleaning",
+    "regular cleaners Manchester",
+  ],
 };
 
 const FAQS = [

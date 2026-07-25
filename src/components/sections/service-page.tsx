@@ -16,8 +16,40 @@ export function ServicePage({
   service: Service;
   faqs: { q: string; a: string }[];
 }) {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    provider: { "@type": "CleaningService", name: "PureMaids" },
+    areaServed: ["Bolton", "Manchester", "Bury", "Wigan", "Preston", "Greater Manchester", "Lancashire"],
+    offers: {
+      "@type": "Offer",
+      price: service.priceFrom,
+      priceCurrency: "GBP",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <PageHero
         eyebrow={service.tagline}
         title={service.title}

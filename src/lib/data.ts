@@ -244,20 +244,61 @@ export type Area = {
   name: string;
   postcodes: string[];
   image: string;
+  blurb?: string;
+  primary?: boolean;
 };
 
 export const AREAS: Area[] = [
   {
-    name: "London",
-    postcodes: ["N", "E", "SE", "SW", "W", "NW", "EC", "WC"],
+    name: "Bolton",
+    postcodes: ["BL1-BL7"],
     image:
-      "https://images.pexels.com/photos/1513907/pexels-photo-1513907.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/4239036/pexels-photo-4239036.jpeg?auto=compress&cs=tinysrgb&w=800",
+    primary: true,
+    blurb:
+      "PureMaids is proud to provide professional house cleaning in Bolton and across Greater Manchester. Our vetted, insured local cleaners cover BL1 through BL7, offering weekly domestic cleaning, end of tenancy cleaning, deep cleaning services and office cleaning in Bolton. Get an instant quote and book a trusted Bolton cleaner online in under 60 seconds.",
   },
   {
     name: "Manchester",
     postcodes: ["M1-M40", "SK", "OL"],
     image:
       "https://images.pexels.com/photos/5693562/pexels-photo-5693562.jpeg?auto=compress&cs=tinysrgb&w=800",
+    primary: true,
+    blurb:
+      "Looking for domestic cleaners near me in Manchester? PureMaids covers the whole of Greater Manchester with reliable, eco-friendly house cleaning. From the city centre to Salford, Stockport and Trafford, our DBS-checked cleaners deliver weekly, fortnightly and one-off deep cleaning services across M, SK and OL postcodes.",
+  },
+  {
+    name: "Bury",
+    postcodes: ["BL8", "BL9", "M26", "M25"],
+    image:
+      "https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg?auto=compress&cs=tinysrgb&w=800",
+    primary: true,
+    blurb:
+      "Trusted house cleaning in Bury and surrounding BL8, BL9 and M26 areas. Whether you need a regular domestic cleaner, an end of tenancy clean or a full deep clean, our vetted Bury cleaners bring eco-friendly products and a satisfaction guarantee to every visit.",
+  },
+  {
+    name: "Wigan",
+    postcodes: ["WN1-WN8"],
+    image:
+      "https://images.pexels.com/photos/4239026/pexels-photo-4239026.jpeg?auto=compress&cs=tinysrgb&w=800",
+    primary: true,
+    blurb:
+      "Professional cleaning services in Wigan covering WN1 through WN8. Our local Wigan cleaners offer weekly and fortnightly domestic cleaning, end of tenancy cleaning and deep cleaning services, all backed by our £2m public liability insurance and 48-hour satisfaction guarantee.",
+  },
+  {
+    name: "Preston",
+    postcodes: ["PR1-PR11"],
+    image:
+      "https://images.pexels.com/photos/3801469/pexels-photo-3801469.jpeg?auto=compress&cs=tinysrgb&w=800",
+    primary: true,
+    blurb:
+      "Reliable house cleaning in Preston and across PR postcodes. PureMaids provides vetted, insured domestic cleaners, end of tenancy cleaning and deep cleaning services to homes and offices throughout Preston and the surrounding Lancashire area.",
+  },
+  {
+    name: "London",
+    postcodes: ["N", "E", "SE", "SW", "W", "NW", "EC", "WC"],
+    image:
+      "https://images.pexels.com/photos/1513907/pexels-photo-1513907.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     name: "Birmingham",
@@ -282,6 +323,39 @@ export const AREAS: Area[] = [
     postcodes: ["EH1-EH55"],
     image:
       "https://images.pexels.com/photos/5693558/pexels-photo-5693558.jpeg?auto=compress&cs=tinysrgb&w=800",
+  },
+];
+
+export const LOCAL_SEO_TOWNS = [
+  {
+    name: "Bolton",
+    keywords: ["house cleaning Bolton", "office cleaning Bolton", "cleaners in Bolton"],
+    description:
+      "House cleaning Bolton — PureMaids provides vetted, insured domestic cleaners, end of tenancy and deep cleaning services across BL1-BL7. Book online in 60 seconds.",
+  },
+  {
+    name: "Manchester",
+    keywords: ["domestic cleaners near me", "cleaners Manchester", "deep cleaning services Manchester"],
+    description:
+      "Domestic cleaners near me in Manchester — PureMaids covers Greater Manchester with weekly, fortnightly and one-off deep cleaning services from vetted local cleaners.",
+  },
+  {
+    name: "Bury",
+    keywords: ["house cleaning Bury", "end of tenancy cleaning Bury", "deep cleaning Bury"],
+    description:
+      "House cleaning in Bury (BL8, BL9, M26) — PureMaids offers regular domestic cleaning, end of tenancy cleaning and deep cleaning services from DBS-checked local cleaners.",
+  },
+  {
+    name: "Wigan",
+    keywords: ["house cleaning Wigan", "end of tenancy cleaning Wigan", "office cleaning Wigan"],
+    description:
+      "House cleaning in Wigan (WN1-WN8) — vetted, insured cleaners for weekly domestic cleaning, end of tenancy and deep cleaning services across the Wigan area.",
+  },
+  {
+    name: "Preston",
+    keywords: ["house cleaning Preston", "deep cleaning services Preston", "cleaners Preston"],
+    description:
+      "House cleaning in Preston (PR1-PR11) — PureMaids provides reliable domestic cleaners, end of tenancy cleaning and deep cleaning services across Preston and Lancashire.",
   },
 ];
 

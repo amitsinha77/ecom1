@@ -2,9 +2,16 @@ import { ServicePage } from "@/components/sections/service-page";
 import { SERVICES } from "@/lib/data";
 
 export const metadata = {
-  title: "Deep Cleaning | Top-to-Bottom Home Deep Clean",
+  title: "Deep Cleaning Services Bolton & Manchester | Top-to-Bottom Deep Clean",
   description:
-    "A thorough, detailed deep clean of every surface, corner, and appliance. Perfect for spring cleans, post-renovation, or when you need that brand-new feeling. Book online today.",
+    "Thorough deep cleaning services in Bolton, Manchester, Bury, Wigan & Preston. Every surface, corner and appliance deep-cleaned. Perfect for spring cleans, post-renovation or that brand-new feeling. Book online today.",
+  keywords: [
+    "deep cleaning services",
+    "deep cleaning Bolton",
+    "deep clean Manchester",
+    "spring cleaning",
+    "one-off deep clean",
+  ],
 };
 
 const FAQS = [

@@ -2,9 +2,16 @@ import { ServicePage } from "@/components/sections/service-page";
 import { SERVICES } from "@/lib/data";
 
 export const metadata = {
-  title: "Office Cleaning | Commercial Cleaning Services UK",
+  title: "Office Cleaning Bolton & Manchester | Commercial Cleaning Services",
   description:
-    "Reliable, discreet commercial cleaning for offices, clinics, and retail. Daily, weekly, or one-off contracts tailored to your business hours. DBS-checked teams. Get a quote.",
+    "Reliable, discreet office cleaning in Bolton, Manchester, Bury, Wigan & Preston. Daily, weekly or one-off commercial cleaning contracts tailored to your business hours. DBS-checked teams. Get a quote.",
+  keywords: [
+    "office cleaning Bolton",
+    "office cleaning Manchester",
+    "commercial cleaning services",
+    "office cleaners near me",
+    "workplace cleaning",
+  ],
 };
 
 const FAQS = [

@@ -2,9 +2,16 @@ import { ServicePage } from "@/components/sections/service-page";
 import { SERVICES } from "@/lib/data";
 
 export const metadata = {
-  title: "End of Tenancy Cleaning | Deposit-Back Guarantee",
+  title: "End of Tenancy Cleaning Bolton & Manchester | Deposit-Back Guarantee",
   description:
-    "Guaranteed landlord-approved end of tenancy cleaning. We cover every inch so you can hand back the keys with confidence and secure your full deposit. Book online today.",
+    "Guaranteed landlord-approved end of tenancy cleaning in Bolton, Manchester, Bury, Wigan & Preston. We cover every inch so you can hand back the keys with confidence and secure your full deposit. Book online today.",
+  keywords: [
+    "end of tenancy cleaning",
+    "end of tenancy cleaning Bolton",
+    "move out cleaning Manchester",
+    "deposit back guarantee",
+    "tenancy clean",
+  ],
 };
 
 const FAQS = [
