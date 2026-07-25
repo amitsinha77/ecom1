@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/layout/cookie-consent";
+import { AuthProvider } from "@/lib/auth-context";
 import { SITE } from "@/lib/data";
 
 const inter = Inter({
@@ -97,10 +98,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <CookieConsent />
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
