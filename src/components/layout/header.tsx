@@ -100,6 +100,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Link href="/portal" className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium text-ink-600 transition-colors hover:bg-ink-50 hover:text-ink-900 sm:inline-flex">
+            My Account
+          </Link>
           <Link href="/book-online" className="btn-primary hidden sm:inline-flex">
             Book Online
           </Link>
@@ -135,6 +138,9 @@ export function Header() {
                 </Link>
               );
             })}
+            <Link href="/portal" className="rounded-xl px-4 py-2.5 text-sm font-medium text-ink-700 hover:bg-ink-50">
+              My Account
+            </Link>
             <Link href="/book-online" className="btn-primary mt-2">
               Book Online
             </Link>
